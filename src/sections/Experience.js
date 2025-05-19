@@ -1,36 +1,73 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaBriefcase, FaGraduationCap, FaDownload } from "react-icons/fa";
+import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
 const experienceData = [
   {
     type: "experience",
-    position: "Software Engineer Intern",
-    company: "ABC Tech Solutions",
-    date: "June 2023 - Sept 2023",
-    description: "Worked on developing microservices using Spring Boot, improved API efficiency by 20%."
+    position: "Software Engineer",
+    company: "Tikaj Security",
+    date: "Oct 2024 - Jan 2025",
+    description: [
+      "Worked on developing microservices using Spring Boot, improved API efficiency by 20%.",
+      "Implemented robust features using Vue.js and JavaScript to streamline the customer onboarding process for 5+ loan types, reducing onboarding time by 30% and elevating user satisfaction by 25%.",
+      "Deployed a New Search feature utilizing Vue.js custom components and Axios for optimized data retrieval, driving a 25% increase in platform engagement and a 30% improvement in search result accuracy.",
+      "Identified, troubleshot, and resolved critical production blocker issues in real-time by utilizing DevTools and Gitlab, reducing application downtime by 30%.",
+      "Performed in-depth debugging and performance profiling using Vue Devtools to address platform-critical bugs, leading to a 20% improvement in application performance."
+    ]
   },
   {
     type: "experience",
-    position: "Web Developer Intern",
-    company: "XYZ Innovations",
-    date: "Jan 2023 - May 2023",
-    description: "Built responsive UI using React.js, collaborated with UX team to enhance design usability."
+    position: "Software Engineer",
+    company: "Incedo Inc",
+    date: "Jan 2024 - Sept 2024",
+    description:[
+      "Worked on developing microservices using Spring Boot, improved API efficiency by 20%.",
+      "Implemented robust features using Vue.js and JavaScript to streamline the customer onboarding process for 5+ loan types, reducing onboarding time by 30% and elevating user satisfaction by 25%.",
+      "Deployed a New Search feature utilizing Vue.js custom components and Axios for optimized data retrieval, driving a 25% increase in platform engagement and a 30% improvement in search result accuracy.",
+      "Identified, troubleshot, and resolved critical production blocker issues in real-time by utilizing DevTools and Gitlab, reducing application downtime by 30%.",
+      "Performed in-depth debugging and performance profiling using Vue Devtools to address platform-critical bugs, leading to a 20% improvement in application performance."
+    ]
+  },
+  {
+    type: "experience",
+    position: "Reasearch Intern",
+    company: "VNIT Nagpur",
+    date: "May 2022 - July 2022",
+    description: [
+      "Worked on developing microservices using Spring Boot, improved API efficiency by 20%.",
+      "Implemented robust features using Vue.js and JavaScript to streamline the customer onboarding process for 5+ loan types, reducing onboarding time by 30% and elevating user satisfaction by 25%.",
+      "Deployed a New Search feature utilizing Vue.js custom components and Axios for optimized data retrieval, driving a 25% increase in platform engagement and a 30% improvement in search result accuracy.",
+      "Identified, troubleshot, and resolved critical production blocker issues in real-time by utilizing DevTools and Gitlab, reducing application downtime by 30%.",
+      "Performed in-depth debugging and performance profiling using Vue Devtools to address platform-critical bugs, leading to a 20% improvement in application performance."
+    ]
   },
   {
     type: "education",
-    position: "B.Tech in Computer Science",
-    company: "XYZ University",
-    date: "2020 - 2024",
-    description: "Studied core computer science subjects, worked on several academic projects."
+    position: "B.Tech in Electronics and Communication Engineering",
+    company: "VNIT Nagpur",
+    date: "2019 - 2023",
+    description: ["CourseWork : Communication Networks , Wireless Communication , Operating System, Embedded System ,Data Structures , Python Programming, Control System"
+      ]
   },
   {
-    type: "certification",
-    position: "AWS Certified Cloud Practitioner",
-    company: "Amazon Web Services",
-    date: "Issued Jan 2024",
-    description: "Certified understanding of AWS Cloud fundamentals."
+    type: "education",
+    position: "High School & 10+2",
+    company: "Jawahar Navodaya Vidyalaya Chandrapur (MH)",
+    date: "2014 - 2018",
+    description: [
+      "CBSE 10th Percentage (2016) - 92.6%",
+      "CBSE 12th Percentage (2018) - 89.8%",
+      "Participated in NVS Regional Table Tennis Tournament Held in JNV Bhusawal in July 2014",
+      ]
   }
+  // {
+  //   type: "certification",
+  //   position: "AWS Certified Cloud Practitioner",
+  //   company: "Amazon Web Services",
+  //   date: "Issued Nov 2023",
+  //   description: ["Certified understanding of AWS Cloud fundamentals."]
+  // }
 ];
 
 const hoverColors = [
@@ -58,9 +95,9 @@ const ExperienceEducation = () => {
           <button onClick={() => setFilter("all")} className={`px-4 py-2 rounded ${filter === "all" ? "bg-blue-600 text-white" : "bg-white border text-gray-700"}`}>All</button>
           <button onClick={() => setFilter("experience")} className={`px-4 py-2 rounded ${filter === "experience" ? "bg-blue-600 text-white" : "bg-white border text-gray-700"}`}>Experience</button>
           <button onClick={() => setFilter("education")} className={`px-4 py-2 rounded ${filter === "education" ? "bg-blue-600 text-white" : "bg-white border text-gray-700"}`}>Education</button>
-          <button onClick={() => setFilter("certification")} className={`px-4 py-2 rounded ${filter === "certification" ? "bg-blue-600 text-white" : "bg-white border text-gray-700"}`}>Certifications</button>
+          {/* <button onClick={() => setFilter("certification")} className={`px-4 py-2 rounded ${filter === "certification" ? "bg-blue-600 text-white" : "bg-white border text-gray-700"}`}>Certifications</button> */}
         </div>
-        <div className="mt-4">
+        {/* <div className="mt-4">
           <a
             href="/resume.pdf"
             download
@@ -68,7 +105,7 @@ const ExperienceEducation = () => {
           >
             <FaDownload /> Download Resume
           </a>
-        </div>
+        </div> */}
       </div>
 
       <div className="max-w-4xl mx-auto border-l-2 border-blue-600 pl-6 space-y-8">
@@ -88,7 +125,13 @@ const ExperienceEducation = () => {
               <span className="text-sm text-gray-500">{item.date}</span>
             </div>
             <p className="text-gray-600 mt-1 font-medium">{item.company}</p>
-            <p className="text-gray-700 mt-2 text-sm">{item.description}</p>
+            {Array.isArray(item.description) && item.description.length > 0 && (
+              <ul className="text-gray-700 mt-2 text-sm list-disc list-inside space-y-1">
+                {item.description.map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
+            )}
           </motion.div>
         ))}
       </div>

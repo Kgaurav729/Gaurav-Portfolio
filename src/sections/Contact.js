@@ -65,15 +65,15 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-5 gap-6">
           {[{
-            icon: <FaLinkedin className="text-blue-600 text-2xl" />, label: "LinkedIn", url: "https://linkedin.com/in/your-linkedin"
+            icon: <FaLinkedin className="text-blue-600 text-2xl" />, label: "LinkedIn", url: "https://www.linkedin.com/in/gaurav-kulmethe-32537b145/"
           }, {
-            icon: <FaGithub className="text-gray-800 text-2xl" />, label: "GitHub", url: "https://github.com/your-github"
+            icon: <FaGithub className="text-gray-800 text-2xl" />, label: "GitHub", url: "https://github.com/Kgaurav729"
           }, {
-            icon: <FaCode className="text-yellow-600 text-2xl" />, label: "LeetCode", url: "https://leetcode.com/your-leetcode"
+            icon: <FaCode className="text-yellow-600 text-2xl" />, label: "LeetCode", url: "https://leetcode.com/u/Codewithgaurav/"
           }, {
-            icon: <FaLaptopCode className="text-green-700 text-2xl" />, label: "GeeksforGeeks", url: "https://auth.geeksforgeeks.org/user/your-gfg"
+            icon: <FaLaptopCode className="text-green-700 text-2xl" />, label: "GeeksforGeeks", url: "https://www.geeksforgeeks.org/user/gauravkulmethe007/"
           }, {
-            icon: <FaCodeBranch className="text-purple-700 text-2xl" />, label: "CodeChef", url: "https://www.codechef.com/users/your-codechef"
+            icon: <FaCodeBranch className="text-purple-700 text-2xl" />, label: "CodeChef", url: "https://www.codechef.com/users/gaurav_88"
           }].map((item, index) => (
             <motion.a
               key={index}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { FaGithub, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,15 +43,12 @@ const Navbar = () => {
             <ScrollLink to="experience" smooth duration={500} className="cursor-pointer hover:text-blue-500">
               Experience
             </ScrollLink>
+            <ScrollLink to="achievements" smooth duration={500} className="cursor-pointer hover:text-blue-500">
+              Achievements
+            </ScrollLink>
             <ScrollLink to="contact" smooth duration={500} className="cursor-pointer hover:text-blue-500">
               Contact
             </ScrollLink>
-            <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-              <FaGithub />
-            </a>
-            <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-              <FaLinkedin />
-            </a>
           </div>
         </div>
 
@@ -70,15 +67,12 @@ const Navbar = () => {
           <ScrollLink to="experience" smooth duration={500} onClick={closeMenu} className="cursor-pointer hover:text-blue-500">
             Experience
           </ScrollLink>
+          <ScrollLink to="achievements" smooth duration={500} className="cursor-pointer hover:text-blue-500">
+              Achievements
+          </ScrollLink>
           <ScrollLink to="contact" smooth duration={500} onClick={closeMenu} className="cursor-pointer hover:text-blue-500">
             Contact
           </ScrollLink>
-          <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-            <FaGithub />
-          </a>
-          <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-            <FaLinkedin />
-          </a>
         </div>
       </nav>
     </>
