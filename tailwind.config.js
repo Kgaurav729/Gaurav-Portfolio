@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    minHeight: {
+      '0': '0',
+      'screen': '90vh', 
+      'custom': '50vh', 
+    }
   },
   plugins: [],
 }
