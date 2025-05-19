@@ -13,7 +13,6 @@ const Home = () => {
       id="home"
       className="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-gray-50"
     >
-      {/* Flip animation for profile image */}
       <motion.div
         ref={imageRef}
         animate={isInView ? { rotateY: 0 } : { rotateY: 90 }}
@@ -31,7 +30,6 @@ const Home = () => {
 
       <p className="text-green-600 font-semibold mb-2">Open to work</p>
 
-      {/* Typewriter animated intro */}
       <h1 className="text-2xl sm:text-4xl font-bold mb-1 text-gray-800 font-mono px-4 py-2">
         Hi, I am "
         <span className="text-blue-600">
