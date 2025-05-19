@@ -1,25 +1,50 @@
-import React from "react";
+import React ,{ useRef } from "react";
 import myimages from "../Images/profile-pic.png";
 import { Link as ScrollLink } from "react-scroll";
 import { FaGithub, FaLinkedin, FaCode, FaFilePdf } from "react-icons/fa";
+import { motion,useInView} from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
+  const imageRef = useRef(null);
+  const isInView = useInView(imageRef, { triggerOnce: false, amount: 0.5 });
   return (
     <section
       id="home"
       className="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-gray-50"
     >
-      <div className="w-40 h-40 mb-6">
+      {/* Flip animation for profile image */}
+      <motion.div
+        ref={imageRef}
+        animate={isInView ? { rotateY: 0 } : { rotateY: 90 }}
+        initial={false}
+        transition={{ duration: 1 }}
+        className="w-40 h-40 mb-6"
+        style={{ transformStyle: "preserve-3d" }}
+      >
         <img
           src={myimages}
           alt="Profile"
           className="rounded-full w-full h-full object-cover border-4 border-blue-500 shadow-lg"
         />
-      </div>
+      </motion.div>
 
       <p className="text-green-600 font-semibold mb-2">Open to work</p>
 
-      <h1 className="text-3xl sm:text-6xl font-bold mb-1">Hi, I am Gaurav</h1>
+      {/* Typewriter animated intro */}
+      <h1 className="text-2xl sm:text-4xl font-bold mb-1 text-gray-800 font-mono px-4 py-2">
+        Hi, I am "
+        <span className="text-blue-600">
+          <Typewriter
+            words={["Gaurav","Developer","Engineer"]}
+            loop={false}
+            cursor
+            cursorStyle="_"
+            typeSpeed={80}
+          />
+        </span>
+        ";
+      </h1>
 
       <h2 className="text-xl sm:text-xl text-gray-700 mb-4">
         Software Engineer | Full Stack Developer
@@ -69,7 +94,7 @@ const Home = () => {
         </ScrollLink>
 
         <a
-          href="https://your-resume-link.pdf"
+          href="https://drive.google.com/file/d/13gJpEuA0pmGhrS5fG4EaAB4A_OPJN9ab/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-2 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition flex items-center space-x-2"

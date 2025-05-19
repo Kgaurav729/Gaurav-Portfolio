@@ -26,7 +26,7 @@ const Contact = () => {
     <section id="contact" className="min-h-screen px-6 py-16 bg-gray-50 text-gray-800">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-2">Let's Connect</h2>
-        <p className="text-lg text-gray-600 mb-6">I am always eager for contribution. Let's connect and make some awesome things.</p>
+        <p className="text-lg text-gray-600 mb-6">Let's connect and make some awesome things.</p>
 
         <form onSubmit={handleSubmit} className="space-y-6 bg-white shadow-md rounded-lg p-6 mb-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -89,7 +89,7 @@ const Contact = () => {
           ))}
         </div>
       </div>
-      <ToastContainer position="bottom-center" />
+      <ToastContainer position="top-center" />
     </section>
   );
 };

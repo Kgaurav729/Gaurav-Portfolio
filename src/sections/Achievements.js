@@ -67,12 +67,12 @@ const Achievements = () => {
             viewport={{ once: true }}
             className="relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-500 w-full max-w-4xl mx-auto"
           >
-            {/* Category Badge */}
+            
             <div className="absolute top-4 right-4 text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
               {item.type}
             </div>
 
-            {/* Main Content */}
+            
             <div className="flex items-center space-x-3">
               {item.icon}
               <h3 className="text-xl font-semibold">{item.title}</h3>
@@ -80,7 +80,7 @@ const Achievements = () => {
             <p className="text-gray-700 font-medium mt-1">{item.org}</p>
             <p className="text-gray-600 mt-2">{item.description}</p>
 
-            {/* Date - Bottom Right */}
+            
             <div className="absolute bottom-4 right-6 text-sm text-gray-500">
               {item.date}
             </div>
