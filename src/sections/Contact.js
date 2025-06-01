@@ -12,14 +12,34 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       toast.error("Please fill in all fields");
       return;
     }
-    toast.success("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
+    // toast.success("Message sent successfully!");
+    // setFormData({ name: "", email: "", message: "" });
+    try {
+    const response = await fetch("http://localhost:8000/api/contact/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      toast.success(data.message || "Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      toast.error("Failed to send message. Please try again.");
+    }
+  } catch (error) {
+    toast.error("An error occurred. Please try again.");
+  }
   };
 
   return (
