@@ -21,7 +21,7 @@ const Contact = () => {
     // toast.success("Message sent successfully!");
     // setFormData({ name: "", email: "", message: "" });
     try {
-    const response = await fetch("http://localhost:8000/api/contact-message/", {
+    const response = await fetch("http://localhost:8000/api/message/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
