@@ -5,8 +5,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import { motion } from "framer-motion";
 
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,7 +23,7 @@ const Contact = () => {
     // toast.success("Message sent successfully!");
     // setFormData({ name: "", email: "", message: "" });
     try {
-    const response = await fetch("http://localhost:8000/api/message/", {
+    const response = await fetch(`${apiUrl}/api/message/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
