@@ -22,11 +22,15 @@ const experienceData = [
     company: "Incedo Inc",
     date: "Jan 2024 - Sept 2024",
     description:[
-      "Worked on developing microservices using Spring Boot, improved API efficiency by 20%.",
-      "Implemented robust features using Vue.js and JavaScript to streamline the customer onboarding process for 5+ loan types, reducing onboarding time by 30% and elevating user satisfaction by 25%.",
-      "Deployed a New Search feature utilizing Vue.js custom components and Axios for optimized data retrieval, driving a 25% increase in platform engagement and a 30% improvement in search result accuracy.",
-      "Identified, troubleshot, and resolved critical production blocker issues in real-time by utilizing DevTools and Gitlab, reducing application downtime by 30%.",
-      "Performed in-depth debugging and performance profiling using Vue Devtools to address platform-critical bugs, leading to a 20% improvement in application performance."
+      "Delivered to the iNext portal using Spring Boot, Java 11, and MySQL, streamlining expense and timesheet processes, improving workflow efficiency for 1,000+ users.",
+      "Upgraded the Expenses and Timesheet modules by refactoring the codebase with Spring MVC, Spring Data JPA, and RESTful APIs, achieving a 25% reduction in latency and a 40% improvement in scalability.",
+      "Executed unit testing with JUnit 5, ensuring robust backend code with 90% test coverage and significantly reducing production defects.",
+      "Built and maintained a full-stack investment platform using React.js and Material-UI, driving a 35% improvement in operational efficiency and streamlining client-advisor workflows.",
+      "Implemented RESTful APIs to display real-time stock prices, financial statements, and historical data by integrating third-party APIs (e.g., Financial Model Prep), improving the decision-making process by 25% through up-to-date financial insights.",
+      "Engineered a client dashboard and educational page with Figma and React.js, increasing user engagement by 40%.",
+      "Developed a full-stack education platform using React.js, Django (Python 3), and MySQL, enabling seamless learning for 1,000+ users.",
+      "Upgraded user dashboards with Material-UI, improving user engagement and navigation efficiency by 35%.",
+      "Built an authentication system with Django’s authentication framework and JWT, ensuring 100% secure login success."
     ]
   },
   {
@@ -35,11 +39,9 @@ const experienceData = [
     company: "VNIT Nagpur",
     date: "May 2022 - July 2022",
     description: [
-      "Worked on developing microservices using Spring Boot, improved API efficiency by 20%.",
-      "Implemented robust features using Vue.js and JavaScript to streamline the customer onboarding process for 5+ loan types, reducing onboarding time by 30% and elevating user satisfaction by 25%.",
-      "Deployed a New Search feature utilizing Vue.js custom components and Axios for optimized data retrieval, driving a 25% increase in platform engagement and a 30% improvement in search result accuracy.",
-      "Identified, troubleshot, and resolved critical production blocker issues in real-time by utilizing DevTools and Gitlab, reducing application downtime by 30%.",
-      "Performed in-depth debugging and performance profiling using Vue Devtools to address platform-critical bugs, leading to a 20% improvement in application performance."
+      "Created a Bitcoin blockchain platform using Flask, HTML5, JavaScript (ES6+), and CSS3, supporting secure interactions for 10,000+ users.",
+      "Integrated a mining process simulation, validating new block creation and improving blockchain comprehension for users by 40%, significantly enhancing conceptual clarity.",
+      "Leveraged RSA public-private key cryptography for secure transaction processing and user authentication, achieving 100% protection against unauthorized access and maintaining a highly secure blockchain environment."
     ]
   },
   {
